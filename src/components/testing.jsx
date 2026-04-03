@@ -3,7 +3,7 @@ import "./testing.css"
 
 export default function Testing() {
    const [count, setCount] = useState(0)
-   const[name, setName] = useState("Tharindu")
+   const [name,setName] = useState("Tharindu")
    
    function increment() {
     if(count < 10) {
@@ -19,22 +19,26 @@ export default function Testing() {
      } 
 }
 
+function changeName(value) {
+     setName(value)
+}
+
 
   return (
     <div className="background">
       <h1>{name}</h1>
 
-      <button onClick={decrement}> - </button>
+      <button className="val" onClick={decrement}> - </button>
       <span> {count}</span>
-      <button onClick={increment}> + </button>
+      <button className="val" onClick={increment}> + </button>
     
-      <div className ="button - panel">
-            <button> Student</button>
-            <button> Teacher</button>   
-            <button> Admin</button>
+      <div className="button-panel">
+            <button onClick={()=>changeName("Students")}> Student</button>
+            <button onClick={()=>changeName("Teacher")}> Teacher</button>   
+            <button onClick={()=>changeName("Admins")}> Admin</button>
         </div>
 
 
     </div>
   )
-    }
+}
