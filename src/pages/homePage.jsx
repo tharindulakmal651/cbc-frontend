@@ -1,4 +1,5 @@
 import './homePage.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -6,7 +7,8 @@ export default function Home() {
             <h1>Welcome to Home Page</h1>
             <p>You are successfully logged in 🎉</p>
 
-            <button className="logout-btn">Logout</button>
+            <button onClick={()=>alert ('Button Clicked')}>Get Start</button>
+            <Link to="/login">Go to Login</Link>
         </div>
     );
 }
