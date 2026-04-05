@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./testing.css"
+//import "./testing.css"
 
 export default function Testing() {
    const [count, setCount] = useState(0)
@@ -19,10 +19,9 @@ export default function Testing() {
      } 
 }
 
-function changeName(value) {
+   function changeName(value) {
      setName(value)
-}
-
+   }
 
   return (
     <div className="background">
@@ -37,7 +36,6 @@ function changeName(value) {
             <button onClick={()=>changeName("Teacher")}> Teacher</button>   
             <button onClick={()=>changeName("Admins")}> Admin</button>
         </div>
-
 
     </div>
   )
